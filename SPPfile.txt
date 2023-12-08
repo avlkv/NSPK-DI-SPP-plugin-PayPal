@@ -34,5 +34,7 @@ START PayPal content
 # ADD UploadDocumentToDB
 
 # Такая конфигурация модулей подходит для "Нативных источников"
+ADD CutJunkCharactersFromDocumentText
 ADD FilterOnlyNewDocumentWithDB
+ADD CutJunkCharactersFromDocumentText
 ADD UploadDocumentToDB
