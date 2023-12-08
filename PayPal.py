@@ -126,7 +126,7 @@ class PayPal:
 
 
                 try:
-                    date = element.find_element(By.CLASS_NAME, 'wd_date').text
+                    date = dateparser.parse(element.find_element(By.CLASS_NAME, 'wd_date').text)
                 except:
                     self.logger.exception('Не удалось извлечь date_text')
                     date = ' '
