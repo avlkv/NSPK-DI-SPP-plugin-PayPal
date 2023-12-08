@@ -93,8 +93,9 @@ class PayPal:
 
         #self.logger.info('Прекращен поиск Cookies')
         #time.sleep(3)
-
-        while True:
+        counter = 0
+        flag = True
+        while flag:
 
             self.logger.debug('Загрузка списка элементов...')
             doc_table = self.driver.find_element(By.CLASS_NAME, 'wd_item_list').find_elements(By.CLASS_NAME,
@@ -161,7 +162,9 @@ class PayPal:
                     pub_date=date,
                     load_date=None,
                 ))
-
+                counter += 1
+                if counter > 15:
+                    flag = False
 
 
 

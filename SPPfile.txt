@@ -5,11 +5,11 @@
 #	NSPK DI
 
 # указание уникального имени источника
-SOURCE PaymentsDive
+SOURCE PayPal
 
 # Тут указывается имя файла с парсером
 # PARSER <название файла с парсером без расширения>
-PARSER PaymentsDive
+PARSER PayPal
 
 # Настройка задачи
 # SETENV <атрибут управления> [<параметры>, ...]
@@ -19,9 +19,11 @@ PARSER PaymentsDive
 # BUS_ADD <название дополнительного потока> <объект / модуль / дополнительный модуль из класса парсера>
 # BUS_ADD s_download PARSER/SOURCE_PARSER_CLASS/nasty_download
 
+INIT driver WebDriver
+
 # Тут указывается класс парсера и метод, который платформа будет вызывать
 # START <название класса парсера> <метод, который должен вернуть список документов>
-START PaymentsDive content
+START PayPal content
 
 
 # Такая конфигурация модулей подходит для "файловых противных источников"
