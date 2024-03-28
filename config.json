@@ -1,6 +1,6 @@
 {
 "plugin": {
-    "reference": "PayPal",
+    "reference": "paypal",
     "type": "SOURCE",
     "filenames": ["PayPal.py"],
     "localstorage": true
